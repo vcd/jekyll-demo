@@ -10,4 +10,10 @@ title: Your New Jekyll Site
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
+
+  {% capture your-var %}{% include_relative _posts/2014-03-05-welcome-to-jekyll.md %}{% endcapture %}
+{{ your-var | markdownify }}
+
 </div>
+
+
